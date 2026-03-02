@@ -1,0 +1,53 @@
+---
+layout: default
+title: "Tudnivalók - Laktózmentes Élet"
+---
+
+<section class="py-12 border-b border-slate-100 mb-16">
+    <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Tudnivalók & Tanácsok</h1>
+        <p class="text-lg text-slate-500 font-light leading-relaxed italic">
+            Minden, amit a laktózmentes életmódról tudni érdemes: szakértői tippek, alapanyag-kalauz és mindennapi segítség.
+        </p>
+    </div>
+</section>
+
+<div class="max-w-5xl mx-auto space-y-24">
+    {% for post in site.posts %}
+    <article class="flex flex-col md:flex-row items-center gap-12 group">
+        <div class="w-full md:w-2/5 aspect-[4/3] rounded-[2rem] overflow-hidden shadow-lg shadow-blue-100 bg-gradient-to-br from-blue-50 to-blue-200 transition duration-500 group-hover:scale-[1.02]">
+             <div class="w-full h-full flex items-center justify-center">
+                 <svg class="w-16 h-16 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+             </div>
+        </div>
+
+        <div class="w-full md:w-3/5">
+            <header class="mb-4">
+                <span class="text-blue-500 font-bold text-xs uppercase tracking-[0.2em] inline-block mb-3">
+                    {{ post.date | date: "%Y. %m. %d." }}
+                </span>
+                <h2 class="text-3xl font-bold text-slate-900 group-hover:text-blue-600 transition tracking-tight">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h2>
+            </header>
+            
+            <p class="text-slate-500 leading-relaxed mb-6 text-lg">
+                {{ post.excerpt | strip_html | truncate: 180 }}
+            </p>
+            
+            <footer class="flex items-center space-x-4">
+                <a href="{{ post.url }}" class="inline-flex items-center text-sm font-black uppercase tracking-widest text-slate-900 border-b-2 border-blue-100 hover:border-blue-500 transition pb-1">
+                    Elolvasom a cikket
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </footer>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+{% if site.posts.size > 10 %}
+<nav class="mt-20 flex justify-center border-t border-slate-100 pt-10">
+    <a href="#" class="px-6 py-3 rounded-full bg-white border border-slate-200 text-sm font-bold hover:bg-blue-50 transition shadow-sm">Régebbi bejegyzések</a>
+</nav>
+{% endif %}
