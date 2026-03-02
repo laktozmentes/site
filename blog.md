@@ -49,6 +49,6 @@ title: "Blog"
         <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 blur-3xl rounded-full -mr-16 -mt-16"></div>
         <h3 class="text-2xl font-bold mb-4 relative z-10 font-serif italic">Inspirációt keresel a konyhában?</h3>
         <p class="text-slate-400 mb-8 max-w-md mx-auto relative z-10 text-sm">Nézd meg a legújabb laktózmentes receptjeinket is!</p>
-        <a href="{{ '/receptek/' | relative_url }}" class="inline-block bg-blue-500 text-white px-10 py-4 rounded-full font-black text-xs uppercase tracking-widest hover:bg-blue-600 transition shadow-lg shadow-blue-900/20">Irány a receptek</a>
+        <a href="{{ '/receptek.html' | relative_url }}" class="...">Irány a receptek</a>
     </div>
 </section>
