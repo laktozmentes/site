@@ -16,7 +16,7 @@ title: "Blog"
         <article class="group flex flex-col bg-white rounded-[2.5rem] border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-500">
             <div class="aspect-[16/10] overflow-hidden relative">
                 {% if post.image %}
-                    <img src="{{ post.image }}" alt="{{ post.title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
                 {% else %}
                     <div class="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100"></div>
                 {% endif %}
