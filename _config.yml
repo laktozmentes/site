@@ -2,7 +2,7 @@
 title: "Laktózmentes Blog"
 description: "Az élet laktózmentes oldala"
 url: "https://laktozmentes.github.io"
-baseurl: "blog" # Üresen hagyva a főoldalon jelenik meg a tartalom
+baseurl: "/blog" # Üresen hagyva a főoldalon jelenik meg a tartalom
 
 # Szebb URL-ek (pl. /blog/bejegyzés-címe a /blog/bejegyzés-címe.html helyett)
 permalink: pretty
@@ -48,3 +48,4 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
