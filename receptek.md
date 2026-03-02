@@ -18,7 +18,7 @@ title: "Receptek"
     <article class="group bg-white rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500 overflow-hidden flex flex-col">  
         <div class="aspect-[4/3] overflow-hidden relative">
             {% if recipe.image %}
-                <img src="{{ recipe.image }}" alt="{{ recipe.title }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <img src="{{ recipe.image | relative_url }}" alt="{{ recipe.title }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
             {% else %}
                 <div class="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
                     <span class="text-blue-200 font-black text-6xl italic group-hover:scale-110 transition duration-500">R</span>
@@ -35,10 +35,10 @@ title: "Receptek"
                 <span>Egyszerű</span>
             </div>            
             <h2 class="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition leading-tight tracking-tight">
-                <a href="{{ recipe.url }}">{{ recipe.title }}</a>
+                <a href="{{ recipe.url | relative_url }}">{{ recipe.title }}</a>
             </h2>            
             <div class="mt-auto pt-6 border-t border-slate-50 flex justify-between items-center">
-                <a href="{{ recipe.url }}" class="text-xs font-black uppercase tracking-widest text-blue-500 hover:text-slate-900 transition">
+                <a href="{{ recipe.url | relative_url }}" class="text-xs font-black uppercase tracking-widest text-blue-500 hover:text-slate-900 transition">
                     Recept megnyitása &rarr;
                 </a>
                 <button class="text-slate-300 hover:text-blue-400 transition">
