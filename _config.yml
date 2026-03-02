@@ -1,20 +1,50 @@
+# Weboldal alapadatai
 title: "Laktózmentes Blog"
 description: "Az élet laktózmentes oldala"
-url: "https://laktozmentes.github.io" # Cseréld ki a sajátodra
-baseurl: "blog"
+url: "https://laktozmentes.github.io"
+baseurl: "blog" # Üresen hagyva a főoldalon jelenik meg a tartalom
 
-# Gyűjtemények (Collections) beállítása
+# Szebb URL-ek (pl. /blog/bejegyzés-címe a /blog/bejegyzés-címe.html helyett)
+permalink: pretty
+
+# Gyűjtemények (Collections)
+# A 'posts' alapból benne van a Jekyllben, a recepteket külön definiáljuk
 collections:
   recipes:
     output: true
     permalink: /receptek/:path/
 
-# Tailwind miatt érdemes a markdown-t tisztán tartani
+# Markdown és Szövegfeldolgozás
 markdown: kramdown
 highlighter: rouge
+excerpt_separator: "" # Ezzel tudod pontosan szabályozni, meddig tartson a rövid kivonat a főoldalon
 
+# Webhely felépítése
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post" # Automatikusan a post layoutot használja a blogcikkekhez
+  - scope:
+      path: ""
+      type: "recipes"
+    values:
+      layout: "recipe" # Automatikusan a recipe layoutot használja a receptekhez
+
+# Kizárások (Ezeket a fájlokat a Jekyll nem fogja buildelni)
 exclude:
   - node_modules
   - tailwind.config.js
   - package.json
   - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - .github
+  - README.md
+
+# Pluginok (Érdemes ezeket hozzáadni a későbbi SEO-hoz)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
