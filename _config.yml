@@ -4,10 +4,6 @@ description: "Az élet laktózmentes oldala"
 url: "https://laktozmentes.github.io"
 baseurl: "" # FONTOS: Hagyd üresen, ha a laktozmentes.github.io címet használod!
 
-# Szebb URL-ek
-# A 'pretty' miatt a blog.md-ből /blog/ lesz (index.html a mappában)
-permalink: pretty
-
 # Gyűjtemények
 collections:
   recipes:
@@ -48,3 +44,4 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
