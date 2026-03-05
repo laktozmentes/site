@@ -1,21 +1,32 @@
 # Weboldal alapadatai
 title: "Laktózmentes Blog"
-description: "Az élet laktózmentes oldala"
+description: "Szakmai tanácsok, adózási infók és isteni receptek a laktózmentes élethez."
 url: "https://laktozmentes.github.io"
-baseurl: "/site" # FONTOS: Most már pontosan megadjuk az alkönyvtárat!
+baseurl: "/site" 
+
+# SEO és Social Media (A jekyll-seo-tag-hez)
+author: "Tamas Szabo" # Itt add meg a neved
+social:
+  name: "Laktózmentes Blog"
+  links:
+    - https://www.facebook.com/laktozmentes # Ha van ilyen
 
 # Gyűjtemények
 collections:
   recipes:
     output: true
-    permalink: /receptek/:path/
+    permalink: /receptek/:title/ # Itt is a :title-t javaslom a :path helyett a tisztább URL-ért
 
+# URL szerkezet a posztoknak
 permalink: /blog/:title/
 
 # Markdown és Szövegfeldolgozás
 markdown: kramdown
 highlighter: rouge
-excerpt_separator: "" # Ezt írd vissza, különben a főoldalon a teljes cikk megjelenik!
+
+# KIVONAT KEZELÉSE (Fontos!)
+# A posztban használd az jelölőt ott, ahol el akarod vágni a szöveget a főoldalon.
+excerpt_separator: ""
 
 # Webhely felépítése
 defaults:
@@ -28,7 +39,7 @@ defaults:
       path: ""
       type: "recipes"
     values:
-      layout: "recipe"
+      layout: "post" # Ha a receptekhez is a post sablont használod, amit javítottunk
 
 # Kizárások
 exclude:
@@ -46,6 +57,3 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-
-
-
