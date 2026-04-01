@@ -3,102 +3,73 @@ layout: default
 title: "Üdvözöllek!"
 ---
 
-<section class="mb-20">
-    {% assign latest = site.posts.first %}
-    <div class="relative group cursor-pointer overflow-hidden rounded-[2.5rem] bg-slate-900 aspect-[21/9] flex items-center justify-center text-white p-12 shadow-2xl">
-        {% if latest.image %}
-            <img src="{{ latest.image | relative_url }}" alt="{{ latest.title }}" class="absolute inset-0 w-full h-full object-cover opacity-60 transition group-hover:scale-105 duration-700">
-        {% else %}
-            <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-sky-400 opacity-90 transition group-hover:scale-105 duration-700"></div>
-        {% endif %}
-        
-        <div class="relative z-10 text-center max-w-3xl">
-            <span class="bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6 inline-block border border-white/30">Kiemelt tartalom</span>
-            <h1 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter leading-[1.1]">{{ latest.title }}</h1>
-            <a href="{{ latest.url | relative_url }}" class="inline-block bg-white text-blue-600 px-10 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:bg-blue-50 transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">Elolvasom a cikket</a>
-        </div>
+<section class="py-12 border-b border-slate-100 mb-12">
+    <div class="max-w-3xl">
+        <span class="text-blue-500 font-bold text-[10px] uppercase tracking-[0.3em] mb-3 block">Tudatosság & Egészség</span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter leading-tight mb-6">
+            Az élet <span class="text-blue-500 italic font-serif">laktózmentes</span> oldala.
+        </h1>
+        <p class="text-lg text-slate-500 leading-relaxed font-medium">
+            Életmód tanácsok, adózási infók és kipróbált receptek, hogy a mentes élet ne lemondás, hanem élmény legyen.
+        </p>
     </div>
 </section>
 
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
     
     <div class="lg:col-span-8">
-        <div class="flex justify-between items-end mb-12 pb-4 border-b border-slate-100">
-            <h2 class="text-3xl font-black text-slate-900 tracking-tight">Legfrissebb a <span class="text-blue-500 font-black">Blogon</span></h2>
-            <a href="{{ '/blog.html' | relative_url }}" class="text-blue-500 text-xs font-black uppercase tracking-widest hover:text-slate-900 transition">Összes cikk &rarr;</a>
+        <div class="flex justify-between items-end mb-8">
+            <h2 class="text-2xl font-black text-slate-900 tracking-tight">Legfrissebb <span class="text-blue-500">cikkek</span></h2>
+            <a href="{{ '/blog.html' | relative_url }}" class="text-blue-500 text-[10px] font-black uppercase tracking-widest">Összes &rarr;</a>
         </div>
 
-        <div class="space-y-16">
-            {% for post in site.posts limit:4 %}
-            <article class="flex flex-col md:flex-row gap-8 group">
-                <div class="md:w-1/3 aspect-[4/3] rounded-3xl overflow-hidden shadow-inner flex-shrink-0 bg-slate-100">
+        <div class="space-y-10">
+            {% for post in site.posts limit:5 %}
+            <article class="group flex flex-col sm:flex-row gap-6">
+                <div class="w-full sm:w-40 aspect-video sm:aspect-square rounded-2xl overflow-hidden bg-slate-100 flex-shrink-0">
                     {% if post.image %}
-                        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="w-full h-full object-cover">
                     {% else %}
-                        <div class="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
-                             <span class="text-blue-200 font-black text-4xl">L</span>
-                        </div>
+                        <div class="w-full h-full bg-blue-50 flex items-center justify-center text-blue-200 font-bold text-2xl">L</div>
                     {% endif %}
                 </div>
 
-                <div class="md:w-2/3 flex flex-col justify-center">
-                    <span class="text-blue-400 font-bold text-[10px] uppercase tracking-[0.2em] mb-2">{{ post.date | date: "%Y. %m. %d." }}</span>
-                    <h3 class="text-2xl font-black mb-4 group-hover:text-blue-600 transition tracking-tight leading-tight text-slate-900">
+                <div class="flex flex-col justify-center">
+                    <span class="text-slate-400 font-bold text-[10px] uppercase mb-2">{{ post.date | date: "%Y. %m. %d." }}</span>
+                    <h3 class="text-xl font-black mb-3 group-hover:text-blue-600 transition tracking-tight leading-tight text-slate-900">
                         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                     </h3>
-                    <p class="text-slate-500 leading-relaxed mb-6 line-clamp-2">
-                        {{ post.excerpt | strip_html | truncate: 150 }}
+                    <p class="text-slate-500 text-sm leading-relaxed line-clamp-2 italic">
+                        {{ post.excerpt | strip_html | truncate: 120 }}
                     </p>
-                    <div>
-                        <a href="{{ post.url | relative_url }}" class="text-xs font-black uppercase tracking-widest border-b-2 border-blue-100 hover:border-blue-500 transition-all pb-1">Tovább olvasom</a>
-                    </div>
                 </div>
             </article>
             {% endfor %}
         </div>
     </div>
 
-    <div class="lg:col-span-4">
-        <div class="sticky top-24">
-            <div class="mb-10 pb-4 border-b border-slate-100">
-                <h2 class="text-2xl font-black text-slate-900 tracking-tight">Új <span class="text-blue-500 font-black">Receptek</span></h2>
-            </div>
-            
-            <div class="space-y-6">
-                {% for recipe in site.recipes limit:5 %}
-                <a href="{{ recipe.url | relative_url }}" class="block group p-4 rounded-2xl hover:bg-white hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-300 border border-transparent hover:border-blue-50">
-                    <div class="flex items-center gap-5">
-                        <div class="w-14 h-14 bg-blue-50 text-blue-500 rounded-2xl flex-shrink-0 flex items-center justify-center font-black text-lg group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
-                            R
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-800 group-hover:text-blue-600 transition leading-tight">{{ recipe.title }}</h4>
-                            <p class="text-[10px] text-slate-400 mt-1 uppercase tracking-widest font-bold">Laktózmentes</p>
-                        </div>
+    <div class="lg:col-span-4 space-y-12">
+        <section>
+            <h2 class="text-xl font-black text-slate-900 tracking-tight mb-6 pb-2 border-b border-slate-100">Új <span class="text-blue-500">receptek</span></h2>
+            <div class="space-y-4">
+                {% for recipe in site.recipes limit:4 %}
+                <a href="{{ recipe.url | relative_url }}" class="flex items-center gap-4 group">
+                    <div class="w-12 h-12 bg-white rounded-xl flex-shrink-0 flex items-center justify-center border border-slate-100 shadow-sm group-hover:bg-blue-500 group-hover:text-white transition-all">
+                        <span class="font-bold text-sm">R</span>
                     </div>
+                    <span class="font-bold text-slate-700 group-hover:text-blue-600 transition-colors text-sm">{{ recipe.title }}</span>
                 </a>
                 {% endfor %}
             </div>
+        </section>
 
-            <div class="mt-12 p-8 bg-blue-600 rounded-[2.5rem] text-center shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-white/10 blur-2xl rounded-full -mr-10 -mt-10"></div>
-                <h3 class="text-xl font-bold text-white mb-4 relative z-10 font-serif italic">Szia! Örülök, hogy itt vagy.</h3>
-                <p class="text-sm text-blue-50 mb-6 relative z-10 leading-relaxed">
-                    Ezen a blogon megmutatom, hogy a laktózmentes élet nem lemondás, hanem egy új, finomabb kezdet.
-                </p>
-                <div class="relative z-10 flex flex-wrap justify-center gap-2">
-                    <span class="bg-white/20 text-white text-[10px] px-3 py-1 rounded-full border border-white/30 uppercase font-bold tracking-widest">Tudatosság</span>
-                    <span class="bg-white/20 text-white text-[10px] px-3 py-1 rounded-full border border-white/30 uppercase font-bold tracking-widest">Mentes Élet</span>
-                </div>
-            </div>
-
-            <div class="mt-8 px-4">
-                <h4 class="text-xs font-black text-slate-400 uppercase tracking-[0.2em] mb-6">Kiemelt témák</h4>
-                <ul class="space-y-4 text-sm font-bold text-slate-600 uppercase tracking-wider">
-                    <li><a href="{{ '/blog.html' | relative_url }}" class="hover:text-blue-500 transition flex items-center gap-2 group"><span class="text-blue-200 group-hover:translate-x-1 transition-transform">&rarr;</span> Adózási tudnivalók</a></li>
-                    <li><a href="{{ '/receptek.html' | relative_url }}" class="hover:text-blue-500 transition flex items-center gap-2 group"><span class="text-blue-200 group-hover:translate-x-1 transition-transform">&rarr;</span> Kedvenc receptjeim</a></li>
-                </ul>
-            </div>
-        </div>
+        <section class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
+            <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6">Kiemelt témák</h4>
+            <ul class="space-y-4 text-xs font-bold text-slate-600 uppercase tracking-widest">
+                <li><a href="{{ '/blog.html' | relative_url }}" class="hover:text-blue-500 transition flex items-center gap-2"> Adózási tudnivalók</a></li>
+                <li><a href="{{ '/receptek.html' | relative_url }}" class="hover:text-blue-500 transition flex items-center gap-2"> Kedvenc receptjeim</a></li>
+                <li><a href="{{ '/blog.html' | relative_url }}" class="hover:text-blue-500 transition flex items-center gap-2"> Életmód tippek</a></li>
+            </ul>
+        </section>
     </div>
 </div>
