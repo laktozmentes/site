@@ -2,47 +2,47 @@
 layout: default
 ---
 
-<article class="max-w-5xl mx-auto py-8">
-    <header class="text-center mb-12">
-        <span class="text-blue-500 font-bold text-[10px] uppercase tracking-[0.3em] mb-4 block">Kipróbált Recept</span>
-        <h1 class="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tighter">{{ page.title }}</h1>
+<article class="max-w-6xl mx-auto py-12 px-6">
+    <header class="mb-16">
+        <div class="inline-flex items-center p-[1px] rounded-full u-rainbow mb-6">
+            <div class="bg-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+                Kipróbált Recept
+            </div>
+        </div>
         
-        <div class="flex justify-center items-center gap-6 text-slate-400 text-[11px] font-bold uppercase tracking-widest">
-            <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>Előkészítés: {{ page.prep_time | default: "15 perc" }}</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <span>Adag: {{ page.servings | default: "2 fő" }}</span>
-            </div>
+        <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[0.9] tracking-tighter mb-8">
+            {{ page.title }}
+        </h1>
+
+        <div class="flex gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+            <span class="flex items-center gap-2">⏱ {{ page.prep_time | default: "20 perc" }}</span>
+            <span class="flex items-center gap-2">🍽 {{ page.servings | default: "2 fő" }}</span>
         </div>
     </header>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        <aside class="lg:col-span-4 order-2 lg:order-1">
-            <div class="bg-blue-50/50 p-8 rounded-[2rem] border border-blue-100/50 lg:sticky lg:top-24">
-                <h3 class="font-black text-slate-900 mb-6 flex items-center gap-3 uppercase text-xs tracking-[0.2em]">
-                    <span class="w-6 h-6 bg-blue-500 rounded-lg flex items-center justify-center text-white text-[10px]">✓</span>
-                    Hozzávalók
-                </h3>
-                <div class="prose prose-blue prose-sm leading-relaxed text-slate-600 
-                            [&>ul]:list-none [&>ul]:pl-0 [&>li]:pb-3 [&>li]:border-b [&>li]:border-blue-100/30 [&>li]:mb-3">
-                    {{ page.ingredients | markdownify }}
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <aside class="lg:col-span-4">
+            <div class="p-[1px] rounded-[2.5rem] u-rainbow shadow-sm">
+                <div class="bg-white/90 backdrop-blur-md p-10 rounded-[2.5rem]">
+                    <h3 class="text-xs font-black uppercase tracking-[0.2em] mb-8 text-slate-900">Hozzávalók</h3>
+                    <div class="prose prose-sm prose-slate 
+                                [&>ul]:list-none [&>ul]:pl-0 [&>ul>li]:py-3 [&>ul>li]:border-b [&>ul>li]:border-slate-100">
+                        {{ page.ingredients | markdownify }}
+                    </div>
                 </div>
             </div>
         </aside>
 
-        <div class="lg:col-span-8 order-1 lg:order-2">
+        <div class="lg:col-span-8">
             {% if page.image %}
-            <div class="rounded-3xl overflow-hidden shadow-sm aspect-video mb-10">
-                <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-full object-cover">
+            <div class="rounded-[3rem] overflow-hidden mb-12 aspect-video bg-slate-100">
+                <img src="{{ page.image | relative_url }}" class="w-full h-full object-cover">
             </div>
             {% endif %}
 
-            <h3 class="text-2xl font-black text-slate-900 mb-8 tracking-tight">Elkészítés</h3>
-            <div class="prose prose-slate max-w-none text-slate-600 text-lg leading-relaxed
-                        [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:space-y-6 [&>ol>li]:font-medium">
+            <h3 class="text-3xl font-black text-slate-900 mb-8 tracking-tight">Elkészítés</h3>
+            <div class="prose prose-lg prose-slate max-w-none 
+                        [&>ol]:list-decimal [&>ol]:pl-5 [&>ol>li]:mb-8 [&>ol>li]:font-medium [&>ol>li]:text-slate-600">
                 {{ content }}
             </div>
         </div>
