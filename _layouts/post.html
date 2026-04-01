@@ -2,51 +2,46 @@
 layout: default
 ---
 
-<article class="max-w-4xl mx-auto py-20 px-6 bg-white">
-    <header class="text-center mb-24">
-        <div class="flex items-center justify-center space-x-3 text-blue-500 font-bold text-xs uppercase tracking-[0.2em] mb-8">
+<article class="max-w-3xl mx-auto py-8 md:py-16">
+    <header class="mb-12">
+        <div class="flex items-center space-x-3 text-blue-500 font-bold text-[10px] uppercase tracking-[0.2em] mb-6">
             <span>{{ page.date | date: "%Y. %m. %d." }}</span>
-            <span class="w-1.5 h-1.5 bg-blue-200 rounded-full"></span>
+            <span class="w-1 h-1 bg-blue-200 rounded-full"></span>
             <span>{{ page.categories | first | default: "Blog" }}</span>
         </div>
         
-        <h1 class="text-5xl md:text-7xl font-[900] text-slate-900 leading-tight tracking-tighter mb-12 font-sans">
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] tracking-tighter mb-8 font-sans">
             {{ page.title }}
         </h1>
 
         {% if page.image %}
-        <div class="rounded-[3rem] overflow-hidden shadow-2xl aspect-[21/9] border-8 border-white bg-slate-100">
+        <div class="rounded-3xl overflow-hidden shadow-sm aspect-video bg-slate-100 mb-12">
             <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-full object-cover">
         </div>
         {% endif %}
     </header>
 
-    <div class="max-w-none text-slate-600 font-sans
-                [&>h2]:text-4xl [&>h2]:md:text-5xl [&>h2]:font-[900] [&>h2]:text-slate-900 [&>h2]:mt-24 [&>h2]:mb-10 [&>h2]:tracking-tight [&>h2]:leading-tight
-                [&>h3]:text-2xl [&>h3]:font-black [&>h3]:text-slate-900 [&>h3]:mt-16 [&>h3]:mb-6
-                [&>p]:text-xl [&>p]:leading-[1.8] [&>p]:mb-10
-                [&>ul]:mb-10 [&>ul]:list-disc [&>ul]:pl-8 [&>ul]:text-xl
-                [&>li]:mb-4
-                [&>blockquote]:my-16 [&>blockquote]:p-10 [&>blockquote]:bg-blue-50/50 [&>blockquote]:rounded-[2.5rem] [&>blockquote]:border-l-8 [&>blockquote]:border-blue-500 [&>blockquote]:italic [&>blockquote]:text-blue-700">
+    <div class="prose prose-slate max-w-none 
+                text-slate-600 font-sans text-lg leading-relaxed
+                [&>h2]:text-3xl [&>h2]:font-black [&>h2]:text-slate-900 [&>h2]:tracking-tight [&>h2]:mt-12 [&>h2]:mb-6
+                [&>h3]:text-xl [&>h3]:font-bold [&>h3]:text-slate-800 [&>h3]:mt-8 [&>h3]:mb-4
+                [&>p]:mb-6
+                [&>ul]:mb-8 [&>ul]:list-disc [&>ul]:pl-6
+                [&>blockquote]:my-10 [&>blockquote]:pl-6 [&>blockquote]:border-l-4 [&>blockquote]:border-blue-500 [&>blockquote]:italic [&>blockquote]:text-slate-700">
         
         {{ content }}
 
     </div>
 
-    <footer class="mt-32 pt-16 border-t border-slate-100">
-        <div class="bg-blue-600 rounded-[3rem] p-12 text-center text-white shadow-2xl relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[80px] rounded-full -mr-32 -mt-32"></div>
-            <h3 class="text-3xl font-black mb-6 relative z-10 tracking-tight">Tetszett az írás?</h3>
-            <p class="text-blue-100 text-lg mb-10 max-w-md mx-auto relative z-10 leading-relaxed">
-                Remélem, tudtam segíteni! Ha van kérdésed, keress bátran.
+    <footer class="mt-20 pt-12 border-t border-slate-100">
+        <div class="bg-white border border-slate-100 rounded-[2rem] p-8 md:p-12 text-center shadow-sm relative overflow-hidden">
+            <h3 class="text-2xl font-black mb-4 tracking-tight text-slate-900">Hasznosnak találtad?</h3>
+            <p class="text-slate-500 mb-8 max-w-sm mx-auto leading-relaxed">
+                Oszd meg másokkal is, vagy nézz körül a többi bejegyzés között!
             </p>
-            <div class="flex justify-center relative z-10">
-                <a href="{{ '/blog.html' | relative_url }}" class="bg-white text-blue-600 px-12 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:bg-blue-50 transition-all shadow-xl">
-                    Vissza a blogra
-                </a>
-            </div>
+            <a href="{{ '/blog.html' | relative_url }}" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                Vissza a bloghoz
+            </a>
         </div>
     </footer>
 </article>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
