@@ -26,17 +26,18 @@
 </head>
 <body class="noise antialiased min-h-screen flex flex-col">
 
-    <nav id="main-nav" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-6 py-3 rounded-xl flex items-center gap-8 transition-all duration-500 w-[90%] md:w-auto">
-        <a href="{{ '/' | relative_url }}" class="font-bold tracking-tighter text-xl uppercase italic">
-            LAKTÓZMENTES<span class="text-blue-600">.</span>
+    <nav id="main-nav" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-8 py-4 rounded-xl flex items-center gap-10 transition-all duration-500 w-[95%] md:w-auto border border-transparent">
+    
+        <a href="{{ '/' | relative_url }}" class="font-bold tracking-tighter text-xl uppercase italic hover:opacity-80 transition">
+            Laktózmentes<span class="text-blue-600">.</span>
         </a>
-        <div class="hidden md:flex gap-6 text-[10px] font-bold uppercase tracking-[0.2em]">
-            <a href="{{ '/blog.html' | relative_url }}" class="hover:text-blue-600 transition">Blog</a>
-            <a href="{{ '/receptek.html' | relative_url }}" class="hover:text-blue-600 transition">Receptek</a>
+    
+        <div class="flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <a href="{{ '/' | relative_url }}" class="hover:text-blue-600 transition {% if page.url == '/' %}text-blue-600{% endif %}">Home</a>
+            <a href="{{ '/blog.html' | relative_url }}" class="hover:text-blue-600 transition {% if page.url contains 'blog' %}text-blue-600{% endif %}">Blog</a>
+            <a href="{{ '/receptek.html' | relative_url }}" class="hover:text-blue-600 transition {% if page.url contains 'receptek' %}text-blue-600{% endif %}">Receptek</a>
         </div>
-        <a href="{{ '/blog.html' | relative_url }}" class="bg-blue-600 text-white px-5 py-2 rounded-lg text-[10px] font-bold uppercase tracking-tighter hover:scale-105 transition shadow-lg shadow-blue-200">
-            Olvasd a blogot
-        </a>
+    
     </nav>
 
     <main class="flex-grow">
