@@ -35,9 +35,9 @@
         <div class="flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em]">
             <a href="{{ '/' | relative_url }}" class="hover:text-blue-600 transition {% if page.url == '/' or page.url == '/index.html' %}text-blue-600 font-black{% endif %}">Home</a>
             
-            <a href="{{ '/blog.html' | relative_url }}" class="hover:text-blue-600 transition {% if page.url contains 'blog' %}text-blue-600 font-black{% endif %}">Blog</a>
+            <a href="{{ '/blog' | relative_url }}" class="hover:text-blue-600 transition {% if page.url contains 'blog' %}text-blue-600 font-black{% endif %}">Blog</a>
             
-            <a href="{{ '/receptek.html' | relative_url }}" class="hover:text-blue-600 transition {% if page.url contains 'receptek' %}text-blue-600 font-black{% endif %}">Receptek</a>
+            <a href="{{ '/receptek' | relative_url }}" class="hover:text-blue-600 transition {% if page.url contains 'receptek' %}text-blue-600 font-black{% endif %}">Receptek</a>
         </div>
     
     </nav>
