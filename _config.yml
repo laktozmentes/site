@@ -2,7 +2,7 @@
 title: "Laktózmentes Blog"
 description: "Szakmai tanácsok, adózási infók és isteni receptek a laktózmentes élethez."
 url: "https://laktozmentes.github.io"
-baseurl: "/site" 
+baseurl: "" 
 
 # SEO és Social Media (A jekyll-seo-tag-hez)
 author: "Tamas Szabo" # Itt add meg a neved
