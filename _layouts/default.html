@@ -26,16 +26,18 @@
 </head>
 <body class="noise antialiased min-h-screen flex flex-col">
 
-    <nav id="main-nav" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-8 py-4 rounded-xl flex items-center gap-10 transition-all duration-500 w-[95%] md:w-auto border border-transparent">
+    <nav id="main-nav" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-8 py-4 rounded-xl flex items-center gap-10 transition-all duration-500 w-[95%] md:w-auto border border-transparent bg-white/90 backdrop-blur-md shadow-sm">
     
         <a href="{{ '/' | relative_url }}" class="font-bold tracking-tighter text-xl uppercase italic hover:opacity-80 transition">
-            LAKTÓZMENTES<span class="text-blue-600">.</span>
+            LM<span class="text-blue-600">.</span>
         </a>
     
         <div class="flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em]">
-            <a href="{{ '/' | relative_url }}" class="hover:text-blue-600 transition {% if page.url == '/' %}text-blue-600{% endif %}">Home</a>
-            <a href="{{ '/blog.html' | relative_url }}" class="hover:text-blue-600 transition {% if page.url contains 'blog' %}text-blue-600{% endif %}">Blog</a>
-            <a href="{{ '/receptek.html' | relative_url }}" class="hover:text-blue-600 transition {% if page.url contains 'receptek' %}text-blue-600{% endif %}">Receptek</a>
+            <a href="{{ '/' | relative_url }}" class="hover:text-blue-600 transition {% if page.url == '/' or page.url == '/index.html' %}text-blue-600 font-black{% endif %}">Home</a>
+            
+            <a href="{{ '/blog.html' | relative_url }}" class="hover:text-blue-600 transition {% if page.url contains 'blog' %}text-blue-600 font-black{% endif %}">Blog</a>
+            
+            <a href="{{ '/receptek.html' | relative_url }}" class="hover:text-blue-600 transition {% if page.url contains 'receptek' %}text-blue-600 font-black{% endif %}">Receptek</a>
         </div>
     
     </nav>
