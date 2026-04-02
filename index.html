@@ -3,69 +3,71 @@ layout: default
 title: "Üdvözöllek!"
 ---
 
-<section class="h-screen flex items-end p-8 md:p-24 relative overflow-hidden bg-white">
+<section class="h-[90vh] flex items-end p-8 md:p-24 relative overflow-hidden bg-white">
     <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover grayscale opacity-10">
-        <div class="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent"></div>
+        <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover grayscale opacity-[0.07]">
+        <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
     </div>
     
     <div class="relative z-10 max-w-5xl">
-        <h1 class="flex flex-col leading-[0.85] reveal">
-            <span class="text-4xl md:text-7xl font-bold uppercase tracking-tighter mb-4">Fedezd fel az</span>
-            <span class="text-7xl md:text-[11rem] italic text-blue-600 font-drama tracking-tight">Élet oldalát.</span>
+        <h1 class="flex flex-col leading-[0.9] reveal">
+            <span class="text-4xl md:text-6xl font-bold uppercase tracking-tighter mb-4 text-slate-400">Fedezd fel az</span>
+            <span class="text-7xl md:text-[10rem] italic text-blue-600 font-drama tracking-tight">Élet oldalát.</span>
         </h1>
-        <p class="mt-8 text-xl text-slate-500 max-w-md font-medium reveal">
+        <p class="mt-8 text-lg text-slate-500 max-w-md font-medium reveal">
             {{ site.description }}
         </p>
     </div>
 </section>
 
-<section class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 py-24 max-w-[1400px] mx-auto bg-white">
-    <div class="bg-slate-50 p-12 rounded-[3rem] border border-slate-100 shadow-sm reveal hover:border-blue-200 transition-colors">
-        <div class="text-blue-600 mb-6 font-mono font-bold text-xs tracking-widest">01 / BLOG</div>
-        <h3 class="text-3xl font-bold uppercase tracking-tighter mb-4">Tudatosság</h3>
-        <p class="text-slate-500 text-sm leading-relaxed mb-8">Szakmai tanácsok és adózási infók, hogy képben legyél.</p>
-        <a href="{{ '/blog.html' | relative_url }}" class="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center text-white hover:scale-110 transition shadow-lg shadow-blue-200">→</a>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-20 max-w-[1400px] mx-auto">
+    <div class="bg-white p-10 rounded-2xl border border-slate-100 shadow-sm reveal hover:border-blue-100 transition-colors">
+        <div class="text-blue-600 mb-6 font-mono font-bold text-[10px] tracking-widest">01 / TUDATOSSÁG</div>
+        <h3 class="text-2xl font-bold uppercase tracking-tighter mb-4 text-slate-900">Szakmai Blog</h3>
+        <p class="text-slate-500 text-sm leading-relaxed mb-8">Adózási infók és életmód tanácsok laktózérzékenyeknek.</p>
+        <a href="{{ '/blog.html' | relative_url }}" class="text-blue-600 font-bold text-xs uppercase tracking-widest border-b border-blue-600 pb-1">Megnyitom →</a>
     </div>
 
-    <div class="bg-blue-600 p-12 rounded-[3rem] text-white shadow-2xl reveal">
-        <div class="text-white/60 mb-6 font-mono font-bold text-xs tracking-widest">02 / RECEPTEK</div>
-        <h3 class="text-3xl font-bold uppercase tracking-tighter mb-4 font-drama italic">Isteni Ízek</h3>
-        <p class="text-white/70 text-sm leading-relaxed mb-8">Válogatott laktózmentes receptek a mindennapokra.</p>
-        <a href="{{ '/receptek.html' | relative_url }}" class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-blue-600 hover:scale-110 transition shadow-lg">→</a>
+    <div class="bg-blue-600 p-10 rounded-2xl text-white shadow-xl reveal">
+        <div class="text-white/60 mb-6 font-mono font-bold text-[10px] tracking-widest">02 / GASZTRO</div>
+        <h3 class="text-2xl font-bold uppercase tracking-tighter mb-4 font-drama italic">Mentes Ízek</h3>
+        <p class="text-white/70 text-sm leading-relaxed mb-8">Kipróbált receptek, amik után nem kell aggódnod.</p>
+        <a href="{{ '/receptek.html' | relative_url }}" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold text-[10px] uppercase tracking-widest inline-block transition hover:bg-slate-50">Összes recept</a>
     </div>
 
-    <div class="bg-slate-900 p-12 rounded-[3rem] text-white reveal border border-slate-800">
-        <div class="text-blue-400 mb-6 font-mono font-bold text-xs tracking-widest">03 / ÉLETMÓD</div>
-        <h3 class="text-3xl font-bold uppercase tracking-tighter mb-4">Minőség</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-8">Hogy a mentes élet ne korlát, hanem egy új lehetőség legyen.</p>
-        <div class="flex gap-2 opacity-30">
-            <div class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
-            <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-            <div class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
+    <div class="bg-slate-900 p-10 rounded-2xl text-white reveal border border-slate-800">
+        <div class="text-blue-400 mb-6 font-mono font-bold text-[10px] tracking-widest">03 / ÉLETMÓD</div>
+        <h3 class="text-2xl font-bold uppercase tracking-tighter mb-4">Minőségi Idő</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-8">Hogy a mentes élet ne lemondás, hanem új fejezet legyen.</p>
+        <div class="flex gap-1.5 opacity-20">
+            {% for i in (1..4) %}<div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div>{% endfor %}
         </div>
     </div>
 </section>
 
-<section class="px-8 py-24 bg-slate-50 rounded-[4rem]">
+<section class="px-8 py-20 bg-slate-50">
     <div class="max-w-6xl mx-auto">
-        <div class="flex justify-between items-end mb-16">
-            <h2 class="text-5xl font-bold tracking-tighter uppercase italic font-drama">Friss írások<span class="text-blue-600">.</span></h2>
-            <a href="{{ '/blog.html' | relative_url }}" class="text-blue-600 font-bold text-xs uppercase tracking-widest border-b-2 border-blue-100 pb-1">Összes megtekintése</a>
+        <div class="flex justify-between items-end mb-12">
+            <h2 class="text-4xl font-bold tracking-tighter uppercase italic font-drama text-slate-900">Friss hírek<span class="text-blue-600">.</span></h2>
+            <a href="{{ '/blog.html' | relative_url }}" class="text-slate-400 font-bold text-[10px] uppercase tracking-[0.2em] hover:text-blue-600 transition">Összes cikk</a>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             {% for post in site.posts limit:2 %}
             <article class="group reveal">
-                <div class="aspect-video rounded-[2.5rem] overflow-hidden mb-6 bg-slate-200 shadow-sm">
+                <div class="aspect-video rounded-xl overflow-hidden mb-5 bg-slate-200 border border-slate-100 shadow-sm">
                     {% if post.image %}
-                        <img src="{{ post.image | relative_url }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <img src="{{ post.image | relative_url }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     {% else %}
-                        <div class="w-full h-full bg-blue-50 flex items-center justify-center text-blue-100 font-bold text-6xl italic font-drama">L</div>
+                        <div class="w-full h-full bg-blue-50 flex items-center justify-center text-blue-100 font-bold text-5xl italic font-drama">L</div>
                     {% endif %}
                 </div>
-                <span class="font-mono text-[10px] text-slate-400 uppercase tracking-[0.2em]">{{ post.date | date: "%Y. %m. %d." }}</span>
-                <h3 class="text-3xl font-bold tracking-tighter mt-4 group-hover:text-blue-600 transition leading-tight">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="font-mono text-[9px] text-blue-600 font-bold uppercase tracking-widest">Post</span>
+                    <span class="w-4 h-[1px] bg-slate-200"></span>
+                    <span class="font-mono text-[9px] text-slate-400 uppercase tracking-widest">{{ post.date | date: "%Y. %m. %d." }}</span>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tighter group-hover:text-blue-600 transition leading-tight text-slate-900">
                     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </h3>
             </article>
