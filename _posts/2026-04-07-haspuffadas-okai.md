@@ -6,7 +6,7 @@ categories: tudatosság
 image: "https://images.unsplash.com/photo-1511688858354-bc8569519cfd?auto=format&fit=crop&q=80&w=2000"
 ---
 
-A haspuffadás az egyik leggyakoribb emésztőrendszeri panasz. Nemcsak kellemetlen, de sokszor a legváratlanabb helyzetekben képes megkeseríteni a mindennapjainkat. Ebben a bejegyzésben mélyére ásunk a folyamatoknak, különös tekintettel a laktózérzékenység okozta tünetekre.
+A haspuffadás az egyik leggyakoribb emésztőrendszeri panasz. Nemcsak kellemetlen, de sokszor a legváratlanabb helyzetekben képes megkeseríteni a mindennapjainkat.
 
 ## Mi is az a haspuffadás?
 
