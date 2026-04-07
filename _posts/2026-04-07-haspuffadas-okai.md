@@ -3,7 +3,7 @@ layout: post
 title: '<span class="text-blue-600">Haspuffadás</span>: Miért történik és hogyan állítsd meg?'
 date: 2026-04-07 10:00:00 +0200
 categories: tudatosság
-image: https://images.unsplash.com/photo-1511688858354-bc8569519cfd?auto=format&fit=crop&q=80&w=2000
+image: https://unsplash.com/photos/a-woman-laying-on-top-of-a-bed-next-to-a-pillow-376sJqPrWcQ
 ---
 
 A haspuffadás az egyik leggyakoribb emésztőrendszeri panasz. Nemcsak kellemetlen, de sokszor a legváratlanabb helyzetekben képes megkeseríteni a mindennapjainkat.
