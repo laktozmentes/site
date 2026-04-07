@@ -3,7 +3,7 @@ layout: post
 title: "Vegán = Laktózmentes? A tévhit, ami kellemetlen meglepetést okozhat"
 date: 2026-03-05 10:00:00 +0100
 categories: tudnivalok tudatossag vegan laktozmentes
-image: /assets/images/2-vegan-vs-laktozmentes.png
+image: https://images.unsplash.com/photo-1627855974700-2be88ada572f?q=80&w=1920&auto=format&fit=crop&crop=focalpoint&fp-y=0.5
 ---
 
 Gyakran hallani a tanácsot: *"Ha laktózérzékeny vagy, egyél vegánt, az biztosan jó lesz!"* Bár a szándék segítőkész, ez az állítás szakmailag nem teljesen igaz. A vegán nem egyenlő a laktózmentessel – és ez a különbség a tüneteid sorsáról dönthet.
