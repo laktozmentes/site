@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '<span class="text-blue-600">Haspuffadás</span>: Miért történik és hogyan állítsd meg?'
+title: 'Haspuffadás: Miért történik és hogyan állítsd meg?'
 date: 2026-04-07 10:00:00 +0200
 categories: tudatosság
 image: https://images.unsplash.com/photo-1654588831411-5ebbd8245994?q=80&w=1920&auto&fit=crop&crop=focalpoint&fp-y=0.5
