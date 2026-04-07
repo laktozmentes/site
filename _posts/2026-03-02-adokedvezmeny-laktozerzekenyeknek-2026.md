@@ -3,7 +3,7 @@ layout: post
 title: "Adókedvezmény 2026-ban: Így igényeld vissza"
 date: 2026-03-02 10:00:00 +0100
 categories: tudnivalok penzugyek laktozmentes
-image: /assets/images/1-adokedvezmeny-2026.png
+image: https://plus.unsplash.com/premium_photo-1679923906285-386991e8d862?q=80&w=1920&auto=format&fit=crop&crop=focalpoint&fp-y=0.5
 ---
 
 Magyarországon a laktózintolerancia súlyos fogyatékosságnak minősülő betegségként van nyilvántartva. Ez azzal jár együtt, hogy jogosultak vagyunk adókedvezmény igénybevételére, ami a mindenkori minimálbér 5%-a havonta. 2026-ban ez az összeg már jelentős segítséget jelent a diéta fenntartásához.
