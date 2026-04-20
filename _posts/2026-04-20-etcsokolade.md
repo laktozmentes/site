@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '<span class="font-drama italic text-blue-600">Étcsokoládé</span>: Biztonságos nasi vagy laktózcsapda?'
+title: 'Étcsokoládé: Biztonságos nasi vagy laktózcsapda?'
 date: 2026-04-20 10:00:00 +0200
 categories: tudatosság
 image: https://images.unsplash.com/photo-1626697556651-67ebdcb8cbd6?q=80&w=1920&auto&fit=crop&crop=focalpoint&fp-y=0.5
